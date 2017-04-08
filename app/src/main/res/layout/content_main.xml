@@ -46,7 +46,7 @@
                 android:id="@+id/dest"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:hint="destination value"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold"
                 android:textSize="15dp"/>
 
@@ -66,7 +66,7 @@
                 android:id="@+id/dist"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:hint="distance between current location and destination"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold"
                 android:textSize="15dp"/>
 
@@ -86,7 +86,7 @@
                 android:id="@+id/contact"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:hint="contact details of realtives"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
                 android:textStyle="bold"
                 android:textSize="15dp"/>
 

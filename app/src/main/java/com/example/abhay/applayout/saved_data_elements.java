@@ -4,29 +4,35 @@ package com.example.abhay.applayout;
  * Created by abhay on 07/04/17.
  */
 
-public class saved_data_elements {
+public class saved_data_elements extends cus_msg_elements {
     private String dest;
-    private Integer contact;
-    private Integer lattitude;
-    private Integer longitude;
+    private String lattitude;
+    private String longitude;
 
     public saved_data_elements(){}
 
-    public saved_data_elements(String dest, Integer lattitude, Integer longitude, Integer contact)
+    public String getLattitude() {
+        return lattitude;
+    }
+
+    public void setLattitude(String lattitude) {
+        this.lattitude = lattitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public saved_data_elements(String dest, String lattitude, String longitude)
     {
         this.dest=dest;
-        this.contact=contact;
         this.lattitude=lattitude;
         this.longitude=longitude;
 
-    }
-
-    public Integer getContact() {
-        return contact;
-    }
-
-    public void setContact(Integer contact) {
-        this.contact = contact;
     }
 
     public String getDest() {
@@ -38,19 +44,4 @@ public class saved_data_elements {
         this.dest = dest;
     }
 
-    public Integer getLattitude() {
-        return lattitude;
-    }
-
-    public void setLattitude(Integer lattitude) {
-        this.lattitude = lattitude;
-    }
-
-    public Integer getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(Integer longitude) {
-        this.longitude = longitude;
-    }
 }

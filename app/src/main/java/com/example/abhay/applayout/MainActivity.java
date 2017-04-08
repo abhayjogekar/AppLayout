@@ -16,12 +16,16 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final cus_msg_elements[] cus = {(cus_msg_elements) getApplicationContext()};
+        final saved_data_elements sde;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -48,9 +52,19 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        TextView mEdit = (TextView) findViewById(R.id.text_msg);
+
+        //SETTING THE VALUES FOR VIEW FROM DATABASES
+
+
+        TextView msg = (TextView) findViewById(R.id.text_msg);
+        TextView dest = (TextView) findViewById(R.id.dest);
+
         cus[0] = dc.showMsg();
-        mEdit.setText((CharSequence) cus[0].getMsg());
+        sde = dc.showDetails();
+        if(cus[0]!=null)
+            msg.setText((CharSequence) cus[0].getMsg());
+        if(sde != null)
+            dest.setText((CharSequence) sde.getDest());
 
     }
 

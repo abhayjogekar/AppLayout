@@ -7,15 +7,18 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-
     <application
+        android:name=".saved_data_elements"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".cus_msg_elements">
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDNVWdbxYpqG08j-wytsWb5cwrBM0mN1ro" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -34,8 +37,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.abhay.applayout.MainActivity" />
         </activity>
-        <activity android:name=".SetCustomText"
-            android:label="Set Text">
+        <activity
+            android:name=".SetCustomText"
+            android:label="Set Text"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.abhay.applayout.MainActivity" />
+        </activity>
+        <activity android:name=".SetContact"
+            android:label="Set Contact"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

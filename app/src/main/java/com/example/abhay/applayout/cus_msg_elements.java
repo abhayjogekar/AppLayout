@@ -8,13 +8,11 @@ import android.app.Application;
 
 public class cus_msg_elements extends Application {
     private String msg;
-    private int id;
 
     public cus_msg_elements(){}
 
     public cus_msg_elements(String msg)
     {
-        this.id=1;
         this.msg=msg;
     }
 
