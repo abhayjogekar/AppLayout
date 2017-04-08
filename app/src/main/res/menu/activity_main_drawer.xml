@@ -3,27 +3,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/set_dest"
             android:title="Set Destination" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="Save destination and contacts" />
+            android:id="@+id/set_contact"
+            android:title="Set Contact" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:title="Saved Destinations" />
-        <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/set_text"
             android:title="Set Custom Text" />
     </group>
 
     <item android:title="About">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/info"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Application Info" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/dev"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Developers" />
         </menu>

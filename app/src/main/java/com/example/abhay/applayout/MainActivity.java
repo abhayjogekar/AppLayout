@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         final cus_msg_elements[] cus = {(cus_msg_elements) getApplicationContext()};
         final saved_data_elements sde;
+        final contact_elements con;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -58,13 +59,17 @@ public class MainActivity extends AppCompatActivity
 
         TextView msg = (TextView) findViewById(R.id.text_msg);
         TextView dest = (TextView) findViewById(R.id.dest);
+        TextView contact = (TextView) findViewById(R.id.contact);
 
         cus[0] = dc.showMsg();
         sde = dc.showDetails();
+        con = dc.showContact();
         if(cus[0]!=null)
             msg.setText((CharSequence) cus[0].getMsg());
         if(sde != null)
             dest.setText((CharSequence) sde.getDest());
+        if(con!=null)
+            contact.setText((CharSequence) con.getContact());
 
     }
 
@@ -106,19 +111,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.set_dest) {
             // Handle the camera action
             startActivity(new Intent(this, SetDestinationActivity.class));
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.set_contact) {
+            startActivity(new Intent(this, SetContact.class));
+        } else if (id == R.id.set_text) {
             startActivity(new Intent(this, SetCustomText.class));
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.info) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.dev) {
 
         }
 

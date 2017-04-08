@@ -34,27 +34,5 @@
 
     </android.support.v7.widget.AppCompatButton>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="30dp">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/cont"
-            android:inputType="phone"
-            android:maxLines="1" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/Button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit">
-
-    </android.support.v7.widget.AppCompatButton>
-
 </LinearLayout>
 
