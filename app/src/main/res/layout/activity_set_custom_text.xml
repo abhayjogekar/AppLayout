@@ -21,6 +21,7 @@
                 android:id="@+id/custom_txt"
                 android:layout_height="160dp"
                 android:inputType="textMultiLine"
+                android:hint="Set Text to be sent"
                 android:maxLines="5" />
 
         </android.support.design.widget.TextInputLayout>
