@@ -44,28 +44,10 @@ import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.model.LatLng;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
-
-import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
-import static java.sql.Types.DOUBLE;
-import static java.sql.Types.NULL;
 
 
 public class SetDestinationActivity extends FragmentActivity implements PlaceSelectionListener {
 
-    private Button btn_start, btn_stop;
-    private TextView textView;
-    private TextView textView2;
     private TextView mPlaceDetailsText;
 
 
@@ -117,7 +99,7 @@ public class SetDestinationActivity extends FragmentActivity implements PlaceSel
         String lat = String.valueOf(newlocation.latitude);
         String lng = String.valueOf(newlocation.longitude);
 
-        
+
         dc.addDetails(new saved_data_elements((String) place.getName(),lat,lng));
 
         CharSequence attributions = place.getAttributions();
